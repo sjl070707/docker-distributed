@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Olivier Grisel <olivier.grisel@ensta.org>
+MAINTAINER jin lee <sjl070707@gmail.com>
 
 RUN apt-get update -yqq  && apt-get install -yqq \
   wget \
@@ -67,6 +67,8 @@ RUN conda install -y \
   scikit-learn \
   statsmodels \
   && conda clean -tipsy
+
+RUN conda install -y dask -c conda-forge
 
 
 # Install the master branch of distributed and dask
