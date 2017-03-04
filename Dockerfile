@@ -11,7 +11,6 @@ RUN apt-get update -yqq  && apt-get install -yqq \
 # Configure environment
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
-ENV PASSWORD=ilikepenis
 # Folder to install non-system tools and serve as workspace for the notebook
 # user
 RUN mkdir -p /work/bin
