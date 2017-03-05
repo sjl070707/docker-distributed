@@ -1,2 +1,3 @@
 joblib
-git+https://github.com/sjl070707/dask-xgboost.git
+xgboost==0.6a2
+dask-xgboost==0.10

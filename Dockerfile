@@ -68,7 +68,7 @@ RUN conda install -y \
   && conda clean -tipsy
 
 # RUN conda install -y dask -c conda-forge
-RUN conda install -y -c bioconda xgboost=0.6a2
+# RUN conda install -y -c bioconda xgboost=0.6a2
 # RUN pip install dask-xgboost
 
 # Install the master branch of distributed and dask
