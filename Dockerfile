@@ -66,7 +66,7 @@ RUN conda install -y \
   scipy \
   pandas \
   bokeh \
-  scikit-learn=1.81 \
+  scikit-learn=0.18.1 \
   statsmodels \
   && conda clean -tipsy
 
