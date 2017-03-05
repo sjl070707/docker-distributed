@@ -3,5 +3,7 @@
 # to configure a public DNS name for the dscheduler service endpoint,
 # preferably with a TLS certificate and define the STATUS_ENDPOINT environment
 # variable to something like "publicname:443" instead.
+pip install dask
 STATUS_ENDPOINT="${STATUS_ENDPOINT:-"*"}"
-exec su $BASICUSER -c "env PATH=$PATH dask-scheduler --host dscheduler --bokeh-whitelist="$STATUS_ENDPOINT" $*"
+#exec su $BASICUSER -c "env PATH=$PATH dask-scheduler --host dscheduler --bokeh-whitelist="$STATUS_ENDPOINT" $*"
+exec su $BASICUSER -c "env PATH=$PATH dask-scheduler --bokeh-whitelist="$STATUS_ENDPOINT" $*"

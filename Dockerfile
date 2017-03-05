@@ -67,8 +67,9 @@ RUN conda install -y \
   statsmodels \
   && conda clean -tipsy
 
-RUN conda install -y dask -c conda-forge
-
+# RUN conda install -y dask -c conda-forge
+RUN conda install -y -c creditx xgboost=0.62
+RUN pip install dask-xgboost
 
 # Install the master branch of distributed and dask
 COPY requirements.txt .
