@@ -4,4 +4,4 @@ echo "Detected $NCPUS cpus"
 pip install dask[complete] s3fs
 # Alternatively start one python process per CPU
 # exec su $BASICUSER -c "env PATH=$PATH dworker dscheduler:8786 --nthreads 1 --nprocs $NCPUS $*"
-exec su $BASICUSER -c "env PATH=$PATH dask-worker dscheduler:8786"
+exec su $BASICUSER -c "env PATH=$PATH dask-worker dscheduler:8786 --nthreads 1 --nprocs $NCPUS"
