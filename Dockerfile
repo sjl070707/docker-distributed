@@ -29,7 +29,7 @@ WORKDIR /work
 
 # Install Python 3 from miniconda
 RUN wget -O miniconda.sh \
-  https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+  https://repo.continuum.io/miniconda/Miniconda3-4.2.12-Linux-x86_64.sh \
   && bash miniconda.sh -b -p /work/miniconda \
   && rm miniconda.sh
 
@@ -66,8 +66,7 @@ RUN conda install -y \
   scikit-learn \
   statsmodels \
   && conda clean -tipsy
-#change python version for xgboost
-RUN conda install python=3.5.0
+
 # RUN conda install -y dask -c conda-forge
 RUN conda install -y -c creditx xgboost=0.62
 RUN pip install dask-xgboost
