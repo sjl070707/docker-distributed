@@ -1,3 +1,4 @@
 joblib
+git+https://github.com/dask/distributed.git@1.16.0
 xgboost==0.6a2
 dask-xgboost==0.1.0
