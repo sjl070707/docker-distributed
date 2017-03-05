@@ -5,5 +5,5 @@
 # variable to something like "publicname:443" instead.
 pip install dask[complete] s3fs
 STATUS_ENDPOINT="${STATUS_ENDPOINT:-"*"}"
-#exec su $BASICUSER -c "env PATH=$PATH dask-scheduler --host dscheduler --bokeh-whitelist="$STATUS_ENDPOINT" $*"
+# exec su $BASICUSER -c "env PATH=$PATH dask-scheduler --host dscheduler --bokeh-whitelist="$STATUS_ENDPOINT" $*"
 exec su $BASICUSER -c "env PATH=$PATH dask-scheduler --bokeh-whitelist="$STATUS_ENDPOINT" $*"
