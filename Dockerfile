@@ -66,7 +66,8 @@ RUN conda install -y \
   scikit-learn \
   statsmodels \
   && conda clean -tipsy
-
+#change python version for xgboost
+RUN conda install python=3.5.0
 # RUN conda install -y dask -c conda-forge
 RUN conda install -y -c creditx xgboost=0.62
 RUN pip install dask-xgboost
