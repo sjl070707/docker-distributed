@@ -2,6 +2,9 @@ FROM debian:jessie
 MAINTAINER jin lee <sjl070707@gmail.com>
 
 RUN apt-get update -yqq  && apt-get install -yqq \
+  make \
+  gcc \
+  g++ \
   wget \
   bzip2 \
   git \
