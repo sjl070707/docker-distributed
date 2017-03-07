@@ -9,6 +9,7 @@ RUN apt-get update -yqq  && apt-get install -yqq \
   bzip2 \
   git \
   libglib2.0-0 \
+  nfs-common \
   && rm -rf /var/lib/apt/lists/*
 
 # Configure environment
